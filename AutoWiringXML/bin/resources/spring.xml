@@ -1,0 +1,39 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<!-- byType -->
+<!-- <bean id="e" class="beans.Engine"> -->
+<!-- 	<property name="modelYear"> -->
+<!-- 	<value>2015</value> -->
+<!-- 	</property> -->
+<!-- </bean> -->
+<!-- <bean id="e1" class="beans.Engine" autowire-candidate="false"> -->
+<!-- 	<property name="modelYear"> -->
+<!-- 	<value>2010</value> -->
+<!-- 	</property> -->
+<!-- </bean> -->
+<!-- <bean id="c" class="beans.Car" autowire="byType"> -->
+<!-- </bean> -->
+
+
+<!-- byName -->
+<!-- <bean id ="engine" class="beans.Engine"> -->
+<!-- 	<property name="modelYear" value="2015"></property> -->
+<!-- </bean> -->
+<!-- <bean id="e1" class="beans.Engine"> -->
+<!-- 	<property name="modelYear" value="2010"></property> -->
+<!-- </bean> -->
+<!-- <bean id="c" class="beans.Car" autowire="byName"></bean> -->
+
+<!-- constructor -->
+<!-- <bean id="b" class="beans.Bus" autowire="constructor"></bean> -->
+<!-- <bean id ="e" class="beans.Engine"> -->
+<!-- <property name="modelYear" value="2015"></property> -->
+<!-- </bean> -->
+
+<bean id="b" class="beans.Bus" autowire="autodetect"></bean>
+<bean id ="e" class="beans.Engine">
+<property name="modelYear" value="2015"></property>
+</bean>
+
+</beans>

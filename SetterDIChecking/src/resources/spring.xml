@@ -1,0 +1,39 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<!-- 	<bean id="c" class="beans.Car" dependency-check="none"> -->
+<!-- 	 no need to call any setter -->
+
+
+<!-- 		<bean id="c" class="beans.Car" dependency-check="simple"> -->
+<!-- 		 we must need to call primitive setter -->
+<!-- 			<property name="carName"> -->
+<!-- 				<value>Audi</value> -->
+<!-- 			</property> -->
+		
+<!-- 		<bean id="e" class="beans.Engine" dependency-check="simple"> -->
+<!-- 			<property name="modelYear"> -->
+<!-- 				<value>2016</value> -->
+<!-- 			</property> -->
+<!-- 		</bean> -->
+<!-- 		<bean id ="c" class="beans.Car" dependency-check="objects"> -->
+<!-- 		we must need to call primitive setter -->
+<!-- 			<property name="engine" ref="e"> -->
+<!-- 			</property> -->
+<!-- 		</bean> -->
+
+			<bean id = "e" class="beans.Engine" dependency-check="simple">
+				<property name="modelYear">
+					<value>2016</value>
+					</property>
+			</bean>
+			<bean id="c" class="beans.Car" dependency-check="all">
+				<property name="engine" ref ="e">
+				</property>
+				<property name="carName">
+					<value>Audi</value>
+				</property>
+			</bean>
+
+
+</beans>

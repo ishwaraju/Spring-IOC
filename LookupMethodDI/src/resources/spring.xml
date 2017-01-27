@@ -1,0 +1,29 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<!-- for interface lookup method -->
+	<bean id="c" class='beans.Car'>
+		<lookup-method name="myCarEngine" bean="e"/>
+	</bean>
+	<bean id="e" class="beans.Engine">
+		<property name="name" value="Audi"></property>
+	</bean>
+	
+	<!-- for abstract class lookup method -->
+	<bean id="b" class='beans.Bus'>
+		<lookup-method name="myBusEngine" bean="eb"/>
+	</bean>
+	<bean id="eb" class="beans.Engine">
+		<property name="name" value="Volvo"></property>
+	</bean>
+	
+	<!-- for concrete class lookup method -->
+	<bean id="t" class='beans.Truk'>
+		<lookup-method name="myTrukEngine" bean="et"/>
+	</bean>
+	<bean id="et" class="beans.Engine">
+		<property name="name" value="Tata"></property>
+	</bean>
+	
+	
+</beans>
